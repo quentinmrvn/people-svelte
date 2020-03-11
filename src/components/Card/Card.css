@@ -30,7 +30,7 @@
 .Card .card-info {
   display: flex;
   align-items: center;
-  margin-bottom: 2px;  
+  margin-bottom: 2px;
 }
 
 .Card .card-info > span {
@@ -42,13 +42,4 @@
 .Card .card-info > i.material-icons {
   color: #777;
   margin-right: 5px;
-}
-
-.Card .card-action > a {
-  cursor: pointer;
-  user-select: none;
-}
-
-.Card .card-action > .btn {
-  margin-right: 24px;
 }
