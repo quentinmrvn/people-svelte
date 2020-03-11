@@ -4,12 +4,14 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public"
+    "start": "sirv public",
+    "start:api": "json-server --port 3001 data/people.json"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
     "@rollup/plugin-node-resolve": "^7.0.0",
     "autoprefixer": "^9.7.4",
+    "json-server": "^0.16.1",
     "node-sass": "^4.13.1",
     "rollup": "^1.20.0",
     "rollup-plugin-livereload": "^1.0.0",
@@ -21,5 +23,13 @@
   "dependencies": {
     "sass-loader": "^8.0.2",
     "sirv-cli": "^0.4.4"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001",
+      "pathRewrite": {
+        "^/api/": "/"
+      }
+    }
   }
 }
