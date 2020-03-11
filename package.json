@@ -23,13 +23,5 @@
   "dependencies": {
     "sass-loader": "^8.0.2",
     "sirv-cli": "^0.4.4"
-  },
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:3001",
-      "pathRewrite": {
-        "^/api/": "/"
-      }
-    }
   }
 }
