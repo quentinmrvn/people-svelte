@@ -10,17 +10,18 @@
 		persons = response;
 	})
 </script>
-
-<main class="App">
-	<header>
-		<AppBar />
-	</header>
-	<div class="card-container">
-		{#each persons as person}
-			<PersonCard person={person}/>
-		{/each}
-	</div>
-</main>
+<div  class="App">
+	<main>
+		<header>
+			<AppBar />
+		</header>
+		<div class="card-container">
+			{#each persons as person}
+				<PersonCard person={person}/>
+			{/each}
+		</div>
+	</main>
+</div>
 
 <style lang="scss" global>
 	@import "App";
