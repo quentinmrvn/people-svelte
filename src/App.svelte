@@ -1,17 +1,28 @@
 <script>
 	import {fetchPeople} from './services/people'
-	export let name;
-	let toto;
+
+	import PersonCard from './components/PersonCard/PersonCard.svelte'
+	import AppBar from './components/AppBar/AppBar.svelte'
+
+	let persons = [];
 
 	fetchPeople().then(response => {
-		toto = JSON.stringify(response, null, 2)
+		persons = response;
 	})
 </script>
 
-<main>
-	<pre>{toto}</pre>
+<main class="App">
+	<header>
+		<AppBar />
+	</header>
+	<div class="card-container">
+		{#each persons as person}
+			<PersonCard person={person}/>
+		{/each}
+	</div>
 </main>
 
 <style lang="scss" global>
-	@import "./scss/reset";
+	@import "App";
+	@import "index";
 </style>

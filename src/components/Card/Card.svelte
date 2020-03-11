@@ -1,6 +1,3 @@
-<script>
-
-</script>
 
 <section class="Card card">
     <div class="card-content">
