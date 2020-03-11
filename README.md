@@ -2,7 +2,7 @@
 
 ---
 
-# People svelte
+# People Svelte
 ## Get started
 
 Install the dependencies...
